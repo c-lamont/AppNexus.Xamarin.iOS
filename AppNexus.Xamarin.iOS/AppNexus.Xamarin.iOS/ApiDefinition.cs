@@ -627,13 +627,13 @@ namespace AppNexus.Xamarin.iOS
         [Export("requestBannerAdWithSize:rootViewController:serverParameter:adUnitId:targetingParameters:")]
         void RootViewController(CGSize size, UIViewController rootViewController, string parameterString, string idString, IANTargetingParameters targetingParameters);
 
-        [Wrap("WeakDelegate"), Abstract]
-        IANCustomAdapterBannerDelegate Delegate { get; set; }
+        //[Wrap("WeakDelegate"), Abstract]
+        //IANCustomAdapterBannerDelegate Delegate { get; set; }
 
         // @required @property (readwrite, nonatomic, weak) id<ANCustomAdapterBannerDelegate,ANCustomAdapterDelegate> delegate;
-        [Abstract]
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
+        //[Abstract]
+        //[NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
+        //NSObject WeakDelegate { get; set; }
     }
 
     // @protocol ANCustomAdapterInterstitial <ANCustomAdapter>
@@ -656,13 +656,13 @@ namespace AppNexus.Xamarin.iOS
         //[Verify(MethodToProperty)]
         bool IsReady { get; }
 
-        [Wrap("WeakDelegate"), Abstract]
-        IANCustomAdapterInterstitialDelegate Delegate { get; set; }
+        //[Wrap("WeakDelegate"), Abstract]
+        //IANCustomAdapterInterstitialDelegate Delegate { get; set; }
 
         // @required @property (readwrite, nonatomic, weak) id<ANCustomAdapterInterstitialDelegate,ANCustomAdapterDelegate> delegate;
-        [Abstract]
-        [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
-        NSObject WeakDelegate { get; set; }
+        //[Abstract]
+        //[NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
+        //NSObject WeakDelegate { get; set; }
     }
 
     // @protocol ANCustomAdapterBannerDelegate <ANCustomAdapterDelegate>
