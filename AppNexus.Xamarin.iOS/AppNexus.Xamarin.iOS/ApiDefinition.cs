@@ -609,7 +609,7 @@ namespace AppNexus.Xamarin.iOS
     [BaseType(typeof(NSObject))]
     interface IANCustomAdapter
     {
-        [Wrap("WeakDelegate"), Abstract]
+        [Wrap("WeakDelegate")]
         IANCustomAdapterDelegate Delegate { get; set; }
 
         // @required @property (readwrite, nonatomic, weak) id<ANCustomAdapterDelegate> delegate;
@@ -1060,7 +1060,7 @@ namespace AppNexus.Xamarin.iOS
     [BaseType(typeof(NSObject))]
     interface IANNativeCustomAdapter
     {
-        [Wrap("WeakRequestDelegate"), Abstract]
+        [Wrap("WeakRequestDelegate")]
         IANNativeCustomAdapterRequestDelegate RequestDelegate { get; set; }
 
         // @required @property (readwrite, nonatomic, weak) id<ANNativeCustomAdapterRequestDelegate> requestDelegate;
@@ -1068,7 +1068,7 @@ namespace AppNexus.Xamarin.iOS
         [NullAllowed, Export("requestDelegate", ArgumentSemantic.Weak)]
         NSObject WeakRequestDelegate { get; set; }
 
-        [Wrap("WeakNativeAdDelegate"), Abstract]
+        [Wrap("WeakNativeAdDelegate")]
         IANNativeCustomAdapterAdDelegate NativeAdDelegate { get; set; }
 
         // @required @property (readwrite, nonatomic, weak) id<ANNativeCustomAdapterAdDelegate> nativeAdDelegate;
